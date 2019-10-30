@@ -26,7 +26,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+       'allauth.socialaccount',
+ 
     'rest_framework',
+    'rest_framework.authtoken',
+     'rest_auth',
+    'rest_auth.registration',
     'articles',
     'corsheaders',
 ]
@@ -43,7 +51,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'djreact.urls'
-
+SITE_ID=1
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -117,6 +125,10 @@ REST_FRAMEWORK = {
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
    'rest_framework.permissions.AllowAny',
-]
+   
+],
+'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    ),
 }
 CORS_ORIGIN_ALLOW_ALL =True

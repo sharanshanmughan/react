@@ -17,11 +17,11 @@ const CustomLayout = (props)=>{
       >
 
         <Menu.Item key="2">
-        <Link to="/login">Login</Link>
+        <Link to="/">Login</Link>
         </Menu.Item>
 
         <Menu.Item key="1">
-          <Link to="/">Post</Link>
+          <Link to="/articles">Post</Link>
           </Menu.Item>
         
         
