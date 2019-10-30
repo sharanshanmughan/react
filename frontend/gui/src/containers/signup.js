@@ -14,9 +14,9 @@ class CustomSignup extends React.Component {
             username : username,
             password1 : password1,
             password2 : password2
-        }).then(res =>{
-                    
+        }).then(res =>{       
            alert(JSON.stringify(res['data']['key']))
+           this.props.history.push('/');
         }).catch(err=>{
             alert(err)
         })
